@@ -1,9 +1,50 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
-var lowerCase = ["a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"];
-var upperCase = ["A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"];
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var characters = [!, @, #, %, &, ?];
+
+var charLength = prompt("How many characters long would you like your password?");
+
+if (charLength > 8 && charLength < 120) {
+  // TODO: The character length is within the bounds of our application
+} else {
+  alert("Please enter a number between 8 and 120");
+}
+
+var lowerCase = prompt("Do you want your password to contain lowercase letters?");
+if (lowerCase === "yes"){
+
+}else if (lowerCase === "no"){
+
+}else {
+    alert("Please type 'yes' or 'no'");
+}
+
+var upperCase = prompt("Do you want your password to contain uppercase letters?");
+if (upperCase === "yes"){
+
+}else if (upperCase === "no"){
+
+}else {
+    alert("Please type 'yes' or 'no'");
+}
+
+
+var numbers = prompt("Do you want your password to contain numbers?");
+if (numbers === "yes"){
+
+}else if (numbers === "no"){
+
+}else {
+    alert("Please type 'yes' or 'no'");
+}
+
+var specChar = prompt("Do you want your password to contain special characters?");
+if (specChar === "yes"){
+
+}else if (specChar === "no"){
+
+}else {
+    alert("Please type 'yes' or 'no'");
+}
+
 
 // Write password to the #password input
 function writePassword() {
