@@ -24,6 +24,7 @@ chosenArray.push(lowercaseCharacters)
 
 var confirmUpperCase = confirm("Do you want your password to contain uppercase letters?");
 if (confirmUpperCase === "yes"){
+    chosenArray.push(uppercaseCharacters)
 
 }else if (confirmUpperCase === "no"){
 
@@ -32,14 +33,14 @@ if (confirmUpperCase === "yes"){
 
 var confirmNumbers = confirm("Do you want your password to contain numbers?");
 if (confirmNumbers === "yes"){
-
+    chosenArray.push(numberCharacters)
 }else if (confirmNumbers === "no"){
 
 }else
 
 var confirmSpecial = confirm("Do you want your password to contain special characters?");
 if (confirmSpecial === "yes"){
-
+    chosenArray.push(specialCharacters)
 }else if (confirmSpecial === "no"){
 }
 
@@ -51,10 +52,15 @@ function writePassword() {
 
   passwordText.value = password;
 
+  
   function generatePassword(){
-      //use math.random function and use a loop to establish the number of times this function runs based on how many characters the user chose for the length of their password
+    var x = (charLength);
+    Math.floor(Math.random() * x);
+      //use math.random function to retrieve a single character from the chosen array
+       //use a loop to establish the number of times this function runs 
+       //it runs however many times selected by the user as the number of characters
   }
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+document.getElementById(generateBtn).addEventListener("click", writePassword);
